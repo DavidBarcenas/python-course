@@ -1,3 +1,12 @@
+def converter(type_currency, dollar_value):
+    pesos = input('How many ' + type_currency + ' pesos do you have? ')
+    pesos = float(pesos)
+    dollars = pesos / dollar_value;
+    dollars = round(dollars, 2)
+    dollars = str(dollars)
+
+    print('You have $' + dollars + ' dollars')
+
 menu = """
 Welcome to the currency converter!
 
@@ -8,15 +17,6 @@ Welcome to the currency converter!
 Select an option: """
 
 option = input(menu)
-
-def converter(type_currency, dollar_value):
-    pesos = input('How many ' + type_currency + ' pesos do you have? ')
-    pesos = float(pesos)
-    dollars = pesos / dollar_value;
-    dollars = round(dollars, 2)
-    dollars = str(dollars)
-
-    print('You have $' + dollars + ' dollars')
 
 if option == '1':
     converter('mexican', 19.83)
