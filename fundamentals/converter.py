@@ -9,38 +9,20 @@ Select an option: """
 
 option = input(menu)
 
+def converter(type_currency, dollar_value):
+    pesos = input('How many ' + type_currency + ' pesos do you have? ')
+    pesos = float(pesos)
+    dollars = pesos / dollar_value;
+    dollars = round(dollars, 2)
+    dollars = str(dollars)
+
+    print('You have $' + dollars + ' dollars')
+
 if option == '1':
-    pesos = input('How many mexican pesos do you have? ')
-    pesos = float(pesos)
-
-    dollar_value = 19.83;
-
-    dollars = pesos / dollar_value;
-    dollars = round(dollars, 2)
-    dollars = str(dollars)
-
-    print('You have $' + dollars + ' dollars')
+    converter('mexican', 19.83)
 elif option == '2':
-    pesos = input('How many argentine pesos do you have? ')
-    pesos = float(pesos)
-
-    dollar_value = 64
-
-    dollars = pesos / dollar_value;
-    dollars = round(dollars, 2)
-    dollars = str(dollars)
-
-    print('You have $' + dollars + ' dollars')
+    converter('argentine', 64)
 elif option == '3':
-    pesos = input('How many colombian pesos do you have? ')
-    pesos = float(pesos)
-
-    dollar_value = 3875;
-
-    dollars = pesos / dollar_value;
-    dollars = round(dollars, 2)
-    dollars = str(dollars)
-
-    print('You have $' + dollars + ' dollars')
+    converter('argentine', 3875)
 else:
     print('Ingrese una opcion correcta')
