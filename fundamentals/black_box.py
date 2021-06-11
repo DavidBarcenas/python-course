@@ -4,6 +4,9 @@ def sum(num1, num2):
     return num1 + num2
 
 class BlackBoxTest(unittest.TestCase):
+    """
+        unit testing and integration testing
+    """
     def test_add_two_positives(self):
         num_1 = 10
         num_2 = 5
