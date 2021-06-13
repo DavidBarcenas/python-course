@@ -1,3 +1,13 @@
+import math
+
+def dictionaries_comprehensions():
+    cubes = {i:i**3 for i in range(1, 101) if i % 3 != 0}
+    print(cubes)
+    
+    square_root = {i: math.sqrt(i) for i in range(1, 101)}
+    print(square_root)
+
+
 def list_comprehensions():
     # squares = []
     # for i in range(1, 101):
@@ -7,7 +17,8 @@ def list_comprehensions():
     squares = [i**2 for i in range(1, 101) if i % 3 != 0]
     print(squares)
 
-    challenge = [i for i in range(1, 999) if i%4 == 0 and i%6 == 0 and i%9 == 0]
+    # challenge = [i for i in range(1, 999) if i%4 == 0 and i%6 == 0 and i%9 == 0]
+    challenge = [i for i in range(1, 999) if i%4 == 0 and i % 36 == 0]
     print(challenge)
 
 def list_and_dicts():
@@ -35,7 +46,7 @@ def list_and_dicts():
         
 
 def run():
-    list_comprehensions()    
+    dictionaries_comprehensions()  
 
 
 if __name__ == '__main__':
