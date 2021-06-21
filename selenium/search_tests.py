@@ -15,14 +15,20 @@ class HomePageTests(unittest.TestCase):
     
     def test_search_text_field(self):
         search_field = self.driver.find_element_by_id('search')
-   
-   
-    def test_search_text_field_by_name(self):
-        search_field = self.driver.find_element_by_name('q')
+        search_field.clear()
 
+        search_field.send_keys('tee')
+        search_field.submit()
+    
+    def test_search_salt_shaker(self):
+        search_field = self.driver.find_element_by_id('search')
+        search_field.clear()
 
-    def test_search_text_field_by_class_name(self):
-        search_field = self.driver.find_element_by_class_name('input-text')
+        search_field.send_keys('salt shaker')
+        search_field.submit()
+
+        products = self.driver.find_elements_by_expath('//*[@id="product-collection-image-389"]')
+        self.assertEqual(1, len(products))
 
 
     def test_search_button_enabled(self):
