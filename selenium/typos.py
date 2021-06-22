@@ -1,7 +1,7 @@
 import unittest
 from selenium import webdriver
 
-class DynamicControls(unittest.TestCase):
+class Typos(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome(executable_path='/usr/bin/chromedriver')
         driver = self.driver
