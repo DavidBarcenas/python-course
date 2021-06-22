@@ -27,7 +27,7 @@ class AddRemoveElements(unittest.TestCase):
         
         for i in range(elements_removed):
             try:
-                delete_button = driver.find_element_by_xpath('//*[@id="elements"]/button[1]')
+                delete_button = driver.find_element_by_class_name('added-manually')
                 delete_button.click()
             except:
                 print('You are trying to delete more elements the existent')
