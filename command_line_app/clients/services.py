@@ -28,6 +28,16 @@ class ClientService:
 
         self._save_to_disk(updated_clients)
 
+    def delete_client(self, client_uid):
+        clients = self.list_clients()
+        
+        for i in range(len(clients)):
+            if clients[i]['uid'] == client_uid:
+                clients.pop(i)
+
+        self._save_to_disk(clients)
+
+
     def _save_to_disk(self, clients):
         tmp_table_name = self.table_name + '.tmp'
 
